@@ -3,16 +3,17 @@
   src: url(fonts/Roboto-Thin.ttf);
 }
 
-*{
+* {
   font-family: 'Roboto-Thin', monospace;
 }
 
-body{
+body {
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #fff;
-  background: linear-gradient(to right, rgb(83, 105, 118), rgb(41, 46, 73))
+  color: rgba(255, 255, 255, 0.801);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 52, 121, 1) 27%, rgba(0, 212, 255, 1) 100%);
 }
