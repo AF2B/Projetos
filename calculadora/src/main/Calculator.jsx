@@ -27,11 +27,12 @@ export default class Calculator extends Component {
             const equals = operation === '='
             const currentOperation = this.state.operation
             const values = [...this.state.values]
+
             try {
                 values[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`)
                 values[1] = 0
             } catch (error) {
-                console.log(error)
+                alert(error)
             }
 
             if (isNaN(values[0]) || !isFinite(values[0])) {

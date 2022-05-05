@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "André Filipe",
+            "email": "dev_andre.filipe@outlook.com"
+        },
+        {
+            "id": 2,
+            "name": "Fonsêca Borba",
+            "email": "andreffborba@hotmail.com"
+        }
+    ]
+}
