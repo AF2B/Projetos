@@ -3,5 +3,7 @@ import './Footer.css'
 
 export default props =>
     <footer className="footer">
-        Rodapé
+        <span>
+            Desenvolvido por <strong>AF2B</strong>
+        </span>
     </footer>

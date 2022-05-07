@@ -1,0 +1,13 @@
+header.header {
+    background-color: darkgray;
+    padding: 0 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: var(--shadow);
+    color: white;
+    height: 80%;
+}
+
+header.header h1 {
+    font-size: 1.8em;
+}
