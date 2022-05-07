@@ -4,7 +4,7 @@ import './App.css'
 
 import Logo from '../components/templates/Logo'
 import Nav from '../components/templates/Nav'
-import Home from '../components/home/Home'
+import Routes from './Routes';
 import Footer from '../components/templates/Footer'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -15,7 +15,7 @@ export default props =>
         <div className='app'>
             <Logo />
             <Nav />
-            <Home />
+            <Routes />
             <Footer />
         </div>
     </BrowserRouter>
