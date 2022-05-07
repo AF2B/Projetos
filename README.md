@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/AF2B/Projetos">
-    <img src="crud/frontend/src/assets/imgs/logo.png" alt="Logo" width="150" height="100">
+    <img src="crud/frontend/src/assets/imgs/logo.png" alt="Logo" width="250" height="100">
   </a>
 
   <h3 align="center">Projetos</h3>
