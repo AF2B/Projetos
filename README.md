@@ -12,11 +12,8 @@
 
 ## Sobre o Repositório
 
-Este repositório consiste em armazenar meus projetos pessoais com o proposito de mostrar minhas skills
-nas determinadas tecnologias a seguir...
+Este repositório consiste em armazenar meus projetos pessoais.
 
-## Tecnologias
+## Tecnologias atuais contidas
 
 - React
-- Springboot
-...
