@@ -1,0 +1,39 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.button {
+    box-shadow: -1px 2px 50px 6px #e184f3;
+    background: linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+    background-color: #c123de;
+    border-radius: 20px;
+    border: 12px solid #a511c0;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 9px 35px;
+    text-decoration: none;
+    text-shadow: 0px 0px 21px #9b14b3;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+    background-color: #a20dbd;
+}
+
+.button:active {
+    position: relative;
+    top: 1px;
+}
