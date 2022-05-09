@@ -26,6 +26,7 @@
     padding: 9px 35px;
     text-decoration: none;
     text-shadow: 0px 0px 21px #9b14b3;
+    cursor: pointer;
 }
 
 .button:hover {
