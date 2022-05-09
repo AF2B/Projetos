@@ -1,5 +1,5 @@
 :root {
-    --bg-dark: #000000;
+    --bg-dark: #232323;
 
     --logo-height: 100px;
     --menu-top-height: 70px;
@@ -23,7 +23,8 @@
     grid-template-rows: var(--header-height) 1fr var(--footer-height);
     grid-template-areas: "logo header""menu content""menu footer";
     height: 100vh;
-    background-color: #F5F5F5;
+    background: rgb(31,31,31);
+    background: linear-gradient(90deg, rgba(31,31,31,1) 14%, rgba(244,244,244,1) 86%);  
 }
 
 aside.logo {
