@@ -17,3 +17,4 @@ Este repositório consiste em armazenar meus projetos pessoais.
 ## Tecnologias atuais contidas
 
 - React
+- Nextjs
