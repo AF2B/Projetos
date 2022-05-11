@@ -2,11 +2,12 @@ interface ButtonProps {
     cor?: 'black' | 'gray' | 'white'
     className?: string
     children: any;
+    onClick?: () => void
 }
 
 export default function Button(props) {
     return (
-        <button className="bg-gradient-to-r 
+        <button onClick={props.onClick} className="bg-gradient-to-r 
         from-black 
         to-gray-400 
         text-gray-300 
