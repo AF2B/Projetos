@@ -3,15 +3,15 @@ import './question.dart';
 import './aswers.dart';
 
 void main() {
-  runApp(PerguntaApp());
+  runApp(QuestionApp());
 }
 
-class PerguntaApp extends StatefulWidget {
+class QuestionApp extends StatefulWidget {
   @override
-  State<PerguntaApp> createState() => _PerguntaAppState();
+  State<QuestionApp> createState() => _QuestionAppState();
 }
 
-class _PerguntaAppState extends State<PerguntaApp> {
+class _QuestionAppState extends State<QuestionApp> {
   int _selectedQuestion = 0;
 
   int get selectedQuestion => _selectedQuestion;
