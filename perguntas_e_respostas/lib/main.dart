@@ -4,12 +4,18 @@ void main() {
   runApp(PerguntaApp());
 }
 
-class PerguntaApp extends StatelessWidget {
+class PerguntaApp extends StatefulWidget {
+  @override
+  State<PerguntaApp> createState() => _PerguntaAppState();
+}
+
+class _PerguntaAppState extends State<PerguntaApp> {
   int selectedQuestion = 0;
 
   void aswer() {
-    selectedQuestion++;
-    print('Pergunta respondida');
+    setState(() {
+      selectedQuestion++;
+    });
   }
 
   final List<String> questions = [
