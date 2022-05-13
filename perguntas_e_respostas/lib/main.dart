@@ -26,10 +26,26 @@ class _QuestionAppState extends State<QuestionApp> {
     });
   }
 
-  final List<String> questions = [
-    'Qual sua cor favorita?',
-    'Qual o seu animal favorito?'
-  ];
+  final List<Map<String, Object>> questions = [
+    {
+      'texto': 'Qual sua cor favorita?',
+      'respostas': ['Preto', 'Vermelho', 'Verde', 'Branco'],
+    },
+    {
+      'texto': 'Qual o seu animal favorito?',
+      'respostas': ['Coelho', 'Cobra', 'Elefante', 'Leão'],
+    },
+    {
+      'texto': 'Qual seu instrumento músical favorito?',
+      'respostas': ['Guitarra', 'Baixo', 'Bateria', 'Piano'],
+    }
+    ];
+
+    List<Widget> aswer = [];
+    //FIXME
+    for (String textAswer in questions[selectedQuestion].cast()['respostas']) {
+      aswer.add(Aswers(textAswer, _aswer));
+    }
 
   @override
   Widget build(BuildContext context) {
@@ -40,10 +56,8 @@ class _QuestionAppState extends State<QuestionApp> {
         ),
         body: Column(
           children: <Widget>[
-            Question(questions.elementAt(selectedQuestion)),
-            Aswers('Resposta 1', _aswer),
-            Aswers('Resposta 2', _aswer),
-            Aswers('Resposta 3', _aswer),
+            Question(questions[selectedQuestion]['texto'].toString()),
+            ...aswer
           ],
         ),
       ),
