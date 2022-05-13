@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './question.dart';
+import './aswers.dart';
 
 void main() {
   runApp(PerguntaApp());
@@ -10,9 +12,15 @@ class PerguntaApp extends StatefulWidget {
 }
 
 class _PerguntaAppState extends State<PerguntaApp> {
-  int selectedQuestion = 0;
+  int _selectedQuestion = 0;
 
-  void aswer() {
+  int get selectedQuestion => _selectedQuestion;
+
+  set selectedQuestion(int selectedQuestion) {
+    _selectedQuestion = selectedQuestion;
+  }
+
+  void _aswer() {
     setState(() {
       selectedQuestion++;
     });
@@ -31,20 +39,11 @@ class _PerguntaAppState extends State<PerguntaApp> {
           title: Text('Perguntas'),
         ),
         body: Column(
-          children: [
-            Text(questions.elementAt(selectedQuestion)),
-            ElevatedButton(
-              child: Text('Resposta 1'),
-              onPressed: aswer,
-            ),
-            ElevatedButton(
-              child: Text('Resposta 2'),
-              onPressed: aswer,
-            ),
-            ElevatedButton(
-              child: Text('Resposta 3'),
-              onPressed: aswer,
-            ),
+          children: <Widget>[
+            Question(questions.elementAt(selectedQuestion)),
+            Aswers('Resposta 1', _aswer),
+            Aswers('Resposta 2', _aswer),
+            Aswers('Resposta 3', _aswer),
           ],
         ),
       ),
