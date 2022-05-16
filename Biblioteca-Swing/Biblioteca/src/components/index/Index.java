@@ -43,7 +43,6 @@ public class Index {
 	private void initialize() {
 		frmAdministracaoBiblioteca = new JFrame();
 		frmAdministracaoBiblioteca.getContentPane().setLayout(null);
-		frmAdministracaoBiblioteca.setBounds(100, 100, 450, 300);
 		frmAdministracaoBiblioteca.getContentPane().setBackground(new Color(245, 245, 245));
 		frmAdministracaoBiblioteca.setBackground(UIManager.getColor("Button.background"));
 		frmAdministracaoBiblioteca.setTitle("Administração - Biblioteca");
