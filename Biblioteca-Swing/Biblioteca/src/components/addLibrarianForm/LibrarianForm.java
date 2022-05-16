@@ -1,15 +1,19 @@
 package components.addLibrarianForm;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+
+import components.adminSection.AdminSection;
+
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JPasswordField;
 
 public class LibrarianForm {
-
 	private JFrame librarianForm;
 	private JTextField textField;
 	private JPasswordField textField_1;
@@ -48,6 +52,8 @@ public class LibrarianForm {
 		librarianForm = new JFrame();
 		librarianForm.setTitle("Administrador");
 		librarianForm.getContentPane().setLayout(null);
+		librarianForm.setBounds(350, 350, 700, 500);
+		librarianForm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		textField = new JTextField();
 		textField.setBounds(282, 47, 156, 19);
@@ -110,7 +116,13 @@ public class LibrarianForm {
 		JButton btnVoltar = new JButton("Voltar");
 		btnVoltar.setBounds(282, 391, 100, 25);
 		librarianForm.getContentPane().add(btnVoltar);
-		librarianForm.setBounds(350, 350, 700, 500);
-		librarianForm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		btnVoltar.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new AdminSection();
+				AdminSection.main(null);
+				librarianForm.dispose();
+			}
+		});
 	}
 }
