@@ -6,7 +6,6 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 
 public class AdminSection {
-
 	private JFrame adminSection;
 
 	/**
@@ -31,6 +30,7 @@ public class AdminSection {
 	public AdminSection() {
 		initialize();
 	}
+	
 
 	/**
 	 * Initialize the contents of the frame.
