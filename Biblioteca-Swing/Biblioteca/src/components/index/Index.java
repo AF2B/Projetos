@@ -5,14 +5,19 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 
+import components.loginAdmin.LoginAdmin;
+
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JLabel;
 
 public class Index {
 
-	private JFrame frmAdministracaoBiblioteca;
+	private JFrame index;
 
 	/**
 	 * Launch the application.
@@ -22,7 +27,7 @@ public class Index {
 			public void run() {
 				try {
 					Index window = new Index();
-					window.frmAdministracaoBiblioteca.setVisible(true);
+					window.index.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -41,38 +46,52 @@ public class Index {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frmAdministracaoBiblioteca = new JFrame();
-		frmAdministracaoBiblioteca.getContentPane().setLayout(null);
-		frmAdministracaoBiblioteca.getContentPane().setBackground(new Color(245, 245, 245));
-		frmAdministracaoBiblioteca.setBackground(UIManager.getColor("Button.background"));
-		frmAdministracaoBiblioteca.setTitle("Administração - Biblioteca");
-		frmAdministracaoBiblioteca.setBounds(350, 350, 700, 500);
-		frmAdministracaoBiblioteca.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		index = new JFrame();
+		index.getContentPane().setLayout(null);
+		index.getContentPane().setBackground(new Color(245, 245, 245));
+		index.setBackground(UIManager.getColor("Button.background"));
+		index.setTitle("Administração - Biblioteca");
+		index.setBounds(350, 350, 700, 500);
+		index.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		JButton btnAdministrador = new JButton("Administrador");
-		btnAdministrador.setForeground(Color.BLACK);
-		btnAdministrador.setFont(new Font("DejaVu Sans Condensed", Font.BOLD, 12));
-		btnAdministrador.setBounds(269, 116, 137, 43);
-		frmAdministracaoBiblioteca.getContentPane().add(btnAdministrador);
+		JButton btnAdminLogin = new JButton("Administrador");
+		btnAdminLogin.setForeground(Color.BLACK);
+		btnAdminLogin.setFont(new Font("DejaVu Sans Condensed", Font.BOLD, 12));
+		btnAdminLogin.setBounds(269, 116, 137, 43);
+		btnAdminLogin.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new LoginAdmin();
+				LoginAdmin.main(null);
+				index.dispose();
+			}
+		});
 		
-		JButton btnBibliotecario = new JButton("Bibliotecário");
-		btnBibliotecario.setForeground(Color.BLACK);
-		btnBibliotecario.setFont(new Font("DejaVu Sans Condensed", Font.BOLD, 12));
-		btnBibliotecario.setBounds(269, 241, 137, 43);
-		frmAdministracaoBiblioteca.getContentPane().add(btnBibliotecario);
+		index.getContentPane().add(btnAdminLogin);
 		
-		JLabel lblBemVindoAo = new JLabel("Bem vindo ao Sistema da Biblioteca");
-		lblBemVindoAo.setFont(new Font("DejaVu Sans Condensed", Font.BOLD, 20));
-		lblBemVindoAo.setBounds(169, 28, 363, 24);
-		frmAdministracaoBiblioteca.getContentPane().add(lblBemVindoAo);
+		JButton btnLibrarianLogin = new JButton("Bibliotecário");
+		btnLibrarianLogin.setForeground(Color.BLACK);
+		btnLibrarianLogin.setFont(new Font("DejaVu Sans Condensed", Font.BOLD, 12));
+		btnLibrarianLogin.setBounds(269, 241, 137, 43);
+		btnLibrarianLogin.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+			}});
+		index.getContentPane().add(btnLibrarianLogin);
 		
-		JLabel lblVoc = new JLabel("Você é:");
-		lblVoc.setBounds(162, 130, 70, 15);
-		frmAdministracaoBiblioteca.getContentPane().add(lblVoc);
+		JLabel lblWelcome = new JLabel("Bem vindo ao Sistema da Biblioteca");
+		lblWelcome.setFont(new Font("DejaVu Sans Condensed", Font.BOLD, 20));
+		lblWelcome.setBounds(169, 28, 363, 24);
+		index.getContentPane().add(lblWelcome);
 		
-		JLabel lblVoc_1 = new JLabel("Você é:");
-		lblVoc_1.setBounds(162, 255, 70, 15);
-		frmAdministracaoBiblioteca.getContentPane().add(lblVoc_1);
+		JLabel lblYouAre = new JLabel("Você é:");
+		lblYouAre.setBounds(162, 130, 70, 15);
+		index.getContentPane().add(lblYouAre);
+		
+		JLabel lblYouAre2 = new JLabel("Você é:");
+		lblYouAre2.setBounds(162, 255, 70, 15);
+		index.getContentPane().add(lblYouAre2);
 		
 		
 }
