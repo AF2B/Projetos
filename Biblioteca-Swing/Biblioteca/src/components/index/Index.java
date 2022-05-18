@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.UIManager;
 
 import components.loginAdmin.LoginAdmin;
+import components.loginLibrarian.LoginLibrarian;
 
 import javax.swing.JButton;
 import java.awt.Color;
@@ -53,7 +54,7 @@ public class Index {
 		index.setTitle("Administração - Biblioteca");
 		index.setBounds(350, 350, 700, 500);
 		index.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
 		JButton btnAdminLogin = new JButton("Administrador");
 		btnAdminLogin.setForeground(Color.BLACK);
 		btnAdminLogin.setFont(new Font("DejaVu Sans Condensed", Font.BOLD, 12));
@@ -66,9 +67,8 @@ public class Index {
 				index.dispose();
 			}
 		});
-		
 		index.getContentPane().add(btnAdminLogin);
-		
+
 		JButton btnLibrarianLogin = new JButton("Bibliotecário");
 		btnLibrarianLogin.setForeground(Color.BLACK);
 		btnLibrarianLogin.setFont(new Font("DejaVu Sans Condensed", Font.BOLD, 12));
@@ -76,23 +76,16 @@ public class Index {
 		btnLibrarianLogin.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
-			}});
+				new LoginLibrarian();
+				LoginLibrarian.main(null);
+				index.dispose();
+			}
+		});
 		index.getContentPane().add(btnLibrarianLogin);
-		
-		JLabel lblWelcome = new JLabel("Bem vindo ao Sistema da Biblioteca");
+
+		JLabel lblWelcome = new JLabel("Bem vindo ao Sistema Bibliotecário");
 		lblWelcome.setFont(new Font("DejaVu Sans Condensed", Font.BOLD, 20));
 		lblWelcome.setBounds(169, 28, 363, 24);
 		index.getContentPane().add(lblWelcome);
-		
-		JLabel lblYouAre = new JLabel("Você é:");
-		lblYouAre.setBounds(162, 130, 70, 15);
-		index.getContentPane().add(lblYouAre);
-		
-		JLabel lblYouAre2 = new JLabel("Você é:");
-		lblYouAre2.setBounds(162, 255, 70, 15);
-		index.getContentPane().add(lblYouAre2);
-		
-		
+	}
 }
-		}
