@@ -74,6 +74,9 @@ public class DeleteLibrarian {
 					int status = Librarian.delete(id);
 					if (status > 0) {
 						JOptionPane.showMessageDialog(btnDelete, DeleteLibrarian.this, "Bibliotecário apagado com sucesso!", status, null);
+						new AdminSection();
+						AdminSection.main(null);
+						deleteLibrarian.dispose();
 					} else {
 						JOptionPane.showMessageDialog(btnDelete, DeleteLibrarian.this, "Impossível apagar este ID ou este ID não existe!", status, null);
 					}
@@ -82,8 +85,8 @@ public class DeleteLibrarian {
 		});
 		deleteLibrarian.getContentPane().add(btnDelete);
 
-		JButton btnCancel = new JButton("Cancelar");
-		btnCancel.setBounds(294, 234, 100, 19);
+		JButton btnCancel = new JButton("Voltar");
+		btnCancel.setBounds(294, 234, 100, 30);
 		btnCancel.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
