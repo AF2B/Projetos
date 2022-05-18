@@ -112,7 +112,7 @@ public class LibrarianForm {
 		librarianForm.getContentPane().add(lblContact);
 		
 		JButton btnAdd = new JButton("Adicionar");
-		btnAdd.setBounds(282, 270, 117, 35);
+		btnAdd.setBounds(282, 270, 120, 35);
 		btnAdd.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
