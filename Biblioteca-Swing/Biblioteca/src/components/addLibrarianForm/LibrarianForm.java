@@ -117,6 +117,7 @@ public class LibrarianForm {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				String name = nameTextField.getText();
+				@SuppressWarnings("deprecation")
 				String password = passwordTextField.getText();
 				String email = emailTextField.getText();
 				String address = addressTextField.getText();
@@ -125,7 +126,7 @@ public class LibrarianForm {
 				
 				int status = Librarian.save(name, password, email, address, city, contact);
 				
-				if(name.equals(null) || password.equals(null) || email.equals(null) || address.equals(null) || city.equals(null) || contact.equals(null)) {
+				if(name.equals("") && password.equals("") && email.equals("") && address.equals("") && city.equals("") && contact.equals("")) {
 					JOptionPane.showMessageDialog(btnAdd, LibrarianForm.this, "Todos os campos precisam ser preenchidos!",  status, null);
 					nameTextField.setText("");
 					passwordTextField.setText("");
