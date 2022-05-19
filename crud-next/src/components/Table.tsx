@@ -46,7 +46,7 @@ export default function Table(props) {
                 ) : false}
 
                 {props.deleteClient ? (
-                    <button onClick={() => props.selectedClient?.(client)} className="flex 
+                    <button onClick={() => props.deleteClient?.(client)} className="flex 
                     justify-center 
                     items-center text-red-500 rounded-full 
                     hover:bg-red-600 p-2 m-1">{IconTrash}</button>
