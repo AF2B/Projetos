@@ -16,6 +16,8 @@ Este repositório consiste em armazenar meus projetos pessoais.
 
 ## Tecnologias atuais contidas
 
+- Angular
+- Ionic
 - Swing
 - Flutter
 - Nextjs
