@@ -33,8 +33,12 @@ public class BackendApplication implements CommandLineRunner{
 		Product product2 = new Product(null, "Impressora", 1299.00);
 		Product product3 = new Product(null, "Mouse", 120.00);
 		
-		category1.getProducts().addAll(Arrays.asList(product1, product2));
-		category2.getProducts().addAll(Arrays.asList(product1, product3));
+		category1.getProducts().addAll(Arrays.asList(product1, product2, product3));
+		category2.getProducts().addAll(Arrays.asList(product2));
+
+		product1.getCategories().addAll(Arrays.asList(category1));
+		product2.getCategories().addAll(Arrays.asList(category1, category2));
+		product3.getCategories().addAll(Arrays.asList(category1));
 
 		categoryRepository.saveAll(Arrays.asList(category1, category2));
 		productRepository.saveAll(Arrays.asList(product1, product2, product3));
