@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Address implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -22,12 +24,16 @@ public class Address implements Serializable {
     private String neighborhood;
     private String zipCode;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "client_id")
     private Client client;
     @ManyToOne
     @JoinColumn(name = "city_id")
     private City city;
+
+    public Address(){
+    }
 
     public Address(Integer id, String logger, String number, String complemento, String neighborhood, String zipCode,
             Client client, City city) {
@@ -38,7 +44,7 @@ public class Address implements Serializable {
         this.neighborhood = neighborhood;
         this.zipCode = zipCode;
         this.client = client;
-        this.city = city;
+        this.setCity(city);
     }
 
     public Integer getId() {
@@ -96,6 +102,14 @@ public class Address implements Serializable {
     public void setClient(Client client) {
         this.client = client;
     }
+
+    public City getCity() {
+		return city;
+	}
+
+	public void setCity(City city) {
+		this.city = city;
+	}
 
     @Override
     public int hashCode() {
