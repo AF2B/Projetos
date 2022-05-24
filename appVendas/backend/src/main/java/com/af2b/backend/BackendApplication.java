@@ -7,6 +7,7 @@ import com.af2b.backend.Repository.AddressRepository;
 import com.af2b.backend.Repository.CategoryRepository;
 import com.af2b.backend.Repository.CityRepository;
 import com.af2b.backend.Repository.ClientRepository;
+import com.af2b.backend.Repository.ItemRequestRepository;
 import com.af2b.backend.Repository.PaymentRepository;
 import com.af2b.backend.Repository.ProductRepository;
 import com.af2b.backend.Repository.RequestRepository;
@@ -15,6 +16,7 @@ import com.af2b.backend.domain.Address;
 import com.af2b.backend.domain.Category;
 import com.af2b.backend.domain.City;
 import com.af2b.backend.domain.Client;
+import com.af2b.backend.domain.ItemRequest;
 import com.af2b.backend.domain.Payment;
 import com.af2b.backend.domain.PaymentWithBoleto;
 import com.af2b.backend.domain.PaymentWithCard;
@@ -48,6 +50,8 @@ public class BackendApplication implements CommandLineRunner{
 	private RequestRepository requestRepository;
 	@Autowired
 	private PaymentRepository paymentRepository;
+	@Autowired
+	private ItemRequestRepository itemRequestRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(BackendApplication.class, args);	
@@ -80,6 +84,15 @@ public class BackendApplication implements CommandLineRunner{
 		Payment payment1 = new PaymentWithCard(null, PaymentState.QUITADO, request2, 1);
 		Payment payment2 = new PaymentWithBoleto(null, PaymentState.QUITADO, request1, sdf.parse("23/06/2022 12:30pm"), sdf.parse("23/06/2022 12:31pm"));
 
+		ItemRequest itemRequest1 = new ItemRequest(request1, product1, 0.00, 1, 2000.00);
+		ItemRequest itemRequest2 = new ItemRequest(request2, product2, 0.00, 2, 1299.00);
+
+		product1.getItens().addAll(Arrays.asList(itemRequest1));
+		product2.getItens().addAll(Arrays.asList(itemRequest2));
+
+		request1.getItens().addAll(Arrays.asList(itemRequest1));
+		request2.getItens().addAll(Arrays.asList(itemRequest2));
+
 		request1.setPayment(payment2);
 		request2.setPayment(payment1);
 		
@@ -104,6 +117,7 @@ public class BackendApplication implements CommandLineRunner{
 		addressRepository.saveAll(Arrays.asList(address1));
 		requestRepository.saveAll(Arrays.asList(request1, request2));
 		paymentRepository.saveAll(Arrays.asList(payment1, payment2));
+		itemRequestRepository.saveAll(Arrays.asList(itemRequest1, itemRequest2));
 	}
 
 }

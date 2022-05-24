@@ -17,6 +17,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import com.af2b.backend.domain.enums.ClientType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Client implements Serializable {
@@ -38,6 +39,7 @@ public class Client implements Serializable {
     @CollectionTable(name = "Contact")
     private Set<String> phones = new HashSet<>();
 
+    @JsonIgnore
     @OneToMany(mappedBy = "client")
     private List<Request> requests = new ArrayList<>();
 
