@@ -1,3 +1,6 @@
-<p>
-  events works!
-</p>
+<div *ngFor="let event of events">
+  <hr />
+  <p>Tema: {{ event.theme }}</p>
+  <p>Local: {{ event.local }}</p>
+  <hr />
+</div>
