@@ -5,7 +5,6 @@
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/bin/Debug/net5.0/backend.runtimeconfig.json
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/bin/Debug/net5.0/backend.runtimeconfig.dev.json
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/bin/Debug/net5.0/backend.dll
-/home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/bin/Debug/net5.0/ref/backend.dll
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/bin/Debug/net5.0/backend.pdb
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/bin/Debug/net5.0/Microsoft.OpenApi.dll
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/bin/Debug/net5.0/Swashbuckle.AspNetCore.Swagger.dll
@@ -19,7 +18,6 @@
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/obj/Debug/net5.0/backend.MvcApplicationPartsAssemblyInfo.cs
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/obj/Debug/net5.0/backend.MvcApplicationPartsAssemblyInfo.cache
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/obj/Debug/net5.0/staticwebassets/backend.StaticWebAssets.Manifest.cache
-/home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/obj/Debug/net5.0/staticwebassets/backend.StaticWebAssets.xml
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/obj/Debug/net5.0/scopedcss/bundle/backend.styles.css
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/obj/Debug/net5.0/backend.RazorTargetAssemblyInfo.cache
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/obj/Debug/net5.0/backend.csproj.CopyComplete
@@ -27,3 +25,4 @@
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/obj/Debug/net5.0/ref/backend.dll
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/obj/Debug/net5.0/backend.pdb
 /home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/obj/Debug/net5.0/backend.genruntimeconfig.cache
+/home/andre/Documentos/GitHub/Projetos/SistemaEventos/backend/obj/Debug/net5.0/refint/backend.dll
