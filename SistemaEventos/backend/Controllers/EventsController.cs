@@ -9,15 +9,14 @@ namespace backend.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class EventController : ControllerBase
+    public class EventsController : ControllerBase
     {
         
         private readonly DataContext context;
 
-        public EventController(DataContext context)
+        public EventsController(DataContext context)
         {
             this.context = context;
-
         }
 
         [HttpGet]
@@ -27,9 +26,6 @@ namespace backend.Controllers
         }
 
         [HttpGet("{id}")]
-        public IEnumerable<Event> GetById(int id)
-        {
-            return context.Events.Where(_event => _event.EventId == id);
-        }
+        public Event GetById(int id) => (Event)context.Events.Where(_event => _event.EventId == id);
     }
 }
