@@ -15,7 +15,8 @@
 Este repositório consiste em armazenar meus projetos pessoais.
 
 ## Tecnologias atuais contidas
-
+- .NET
+- ASP.NET
 - Angular
 - Ionic
 - Swing
