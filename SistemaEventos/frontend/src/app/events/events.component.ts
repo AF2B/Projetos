@@ -8,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
-  public events: any;
+  widthImg: number = 150;
+  marginImg: number = 2;
+  showImg: boolean = true;
+  private filterList: string = '';
+
+  public events: any = [];
+  public filteredEvents: any = [];
   private readonly apiURL: string = "https://localhost:5001";
 
   constructor(private http: HttpClient) { }
@@ -19,8 +25,30 @@ export class EventsComponent implements OnInit {
 
   public getEvents(): void {
     this.http.get(`${this.apiURL}/api/events`).subscribe(
-      response => this.events = response
+      response => this.events = response,
+      this.filterEvents = this.events
     );
+  }
+
+  public hideImg() {
+    this.showImg = !this.showImg;
+  }
+
+  public filterEvents(value: string): any {
+    value = value.toLowerCase();
+
+    return this.events.filter(
+      (event: any) => event.theme.toLowerCase().indexOf(value) !== -1 || event.local.toLowerCase().indexOf(value) !== -1
+    )
+  }
+
+  public get getFilterList(): string {
+    return this.filterList
+  }
+
+  public set setFilterList(value: string) {
+    this.filterList = value;
+    this.events = this.filterList ? this.filterEvents(this.filterList) : this.filterList;
   }
 
 }
