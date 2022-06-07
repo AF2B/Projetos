@@ -1,0 +1,44 @@
+<div class="container mt-4">
+  <h1>Angular Courses</h1>
+
+  <div class="form-group row">
+    <label class="col-sm-4 col-form-label">Filtro: </label>
+    <div class="col-sm-10">
+      <input [(ngModel)]="filter" class="form-control" />
+    </div>
+  </div>
+
+  <table class="table table-stripped">
+    <thead>
+      <tr>
+        <th>Imagem</th>
+        <th>Nome</th>
+        <th>Preço</th>
+        <th>Código</th>
+        <th>Data de criação</th>
+        <th>Nota</th>
+        <th>Opções</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of filteredCourses">
+        <td>
+          <img
+            [src]="course.imageUrl"
+            alt="Imagem do curso"
+            width="40px"
+            height="40px"
+          />
+        </td>
+        <td>{{ course.name }}</td>
+        <td>{{ course.price }}</td>
+        <td>{{ course.code  | lowercase | replace: '-': ' ' }}</td>
+        <td>{{ course.releaseDate | date: 'dd/MM/yyyy' }}</td>
+        <td><app-starRating [rating]="course.rating"></app-starRating></td>
+        <td>
+          <a [routerLink]="['/cursos/info', course.id]" class="btn btn-info">Informações</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
