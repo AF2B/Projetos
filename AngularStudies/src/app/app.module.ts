@@ -15,6 +15,7 @@ import { NavBarComponent } from './core/components/nav-bar/nav-bar.component';
 import { PageNotFoundComponent } from './components/PageNotFound/PageNotFound.component';
 import { CourseInfoComponent } from './components/courseInfo/courseInfo.component';
 import { StarRatingComponent } from './shared/components/starRating/starRating.component';
+import { DirectivesComponent } from './components/directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { StarRatingComponent } from './shared/components/starRating/starRating.c
     NavBarComponent,
     PageNotFoundComponent,
     CourseInfoComponent,
-    StarRatingComponent
+    StarRatingComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
