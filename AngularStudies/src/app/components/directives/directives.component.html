@@ -1,0 +1,31 @@
+<h2 [ngStyle]="{background: count < 5 ? 'blue' : 'green'}" class="container text-center">{{count}}</h2>
+
+<div class="container text-center">
+  <h3 *ngIf="count > 5; else maior">O Contador passou de 5</h3>
+  <ng-template #maior>
+    <h3 *ngIf="count < 5">O Contador é menor que 5</h3>
+  </ng-template>
+</div>
+
+<ul class="list-group mx-auto col-3" [ngSwitch]="count">
+  <li class="list-group-item" *ngSwitchCase="1">É igual a 1</li>
+  <li class="list-group-item" *ngSwitchCase="2">É igual a 2</li>
+  <li class="list-group-item" *ngSwitchCase="3">É igual a 3</li>
+  <li class="list-group-item" *ngSwitchCase="4">É igual a 4</li>
+  <li class="list-group-item" *ngSwitchCase="5">É igual a 5</li>
+</ul>
+
+<ul class="list-group mx-auto my-3 col-3">
+  <li class="list-group-item" *ngFor="let pessoa of pessoas">
+    Nome: {{pessoa.nome}} {{pessoa.sobrenome}}
+  </li>
+</ul>
+
+<div class="container text-center mx-auto col-4">
+  <button class="btn btn-success" (click)="click()">Click-me!</button>
+</div>
+
+<div class="container text-center mx-auto my-2 col-2">
+  <input type="text" [(ngModel)]="text" class="form-control">
+  <h4>Saída: {{text}}</h4>
+</div>
