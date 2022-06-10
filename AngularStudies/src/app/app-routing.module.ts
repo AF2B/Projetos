@@ -1,3 +1,4 @@
+import { DirectivesComponent } from './components/directives/directives.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CourseInfoComponent } from './components/courseInfo/courseInfo.component';
@@ -13,6 +14,9 @@ const routes: Routes = [
   },
   {
     path: 'cursos/info/:id', component: CourseInfoComponent
+  },
+  {
+    path: 'diretivas', component: DirectivesComponent
   },
   {
     path: '**', component: PageNotFoundComponent
